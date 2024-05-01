@@ -1,7 +1,15 @@
+using Market.Areas.Tienda.Services;
+using Market.Areas.Tienda.Interfaces;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddScoped<IProductos, ProductosServicices>();
+builder.Services.AddScoped<ICategorias, CategoriasServices>();
+builder.Services.AddScoped<IMenu, MenuService >();
+
+
 
 var app = builder.Build();
 
@@ -19,6 +27,12 @@ app.UseStaticFiles();
 app.UseRouting();
 
 app.UseAuthorization();
+
+app.MapControllerRoute(
+    name: "Areas",
+    pattern: "{area}/{controller=Home}/{action=Index}/{id?}");
+
+
 
 app.MapControllerRoute(
     name: "default",
