@@ -5,7 +5,7 @@ VisualStudioVersion = 17.9.34728.123
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Market", "Market.csproj", "{788592DB-6C8B-40D4-83D3-F844289BDB35}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PruebasMarket", "..\PruebasMarket\PruebasMarket.csproj", "{F9ED8D8F-835B-43F0-8924-4A2B6B0440BA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PruebasMarket", "..\PruebasMarket\PruebasMarket.csproj", "{F9ED8D8F-835B-43F0-8924-4A2B6B0440BA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -88,8 +88,11 @@ namespace Market.Areas.Tienda.Services
 
             return productos;
         }
-
-        public List<ProductosViewModel> GetProductos()
+        /// <summary>
+        /// Trae todos los productos
+        /// </summary>
+        /// <returns></returns>
+        public List<ProductosViewModel> GetProductosTodos()
         {
             var Producto = productos();
 
@@ -100,6 +103,11 @@ namespace Market.Areas.Tienda.Services
         {
             
             var Producto=productos().Where(x => x.IdCategoria == IdCategoria).ToList();
+            return Producto;
+        }
+        public ProductosViewModel GetProducto(int id)
+        {
+            var Producto = productos().Where(x => x.Id == id).ToList().FirstOrDefault();
             return Producto;
         }
     }

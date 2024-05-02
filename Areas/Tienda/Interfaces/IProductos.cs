@@ -5,8 +5,10 @@ namespace Market.Areas.Tienda.Interfaces
 {
     public interface IProductos
     {
-        List<ProductosViewModel> productos();
-        List<ProductosViewModel> GetProductos();
+        
+        
         List<ProductosViewModel> GetProductoxCategorias(int IdCategoria);
+        List<ProductosViewModel> GetProductosTodos();
+        ProductosViewModel GetProducto(int id);
     }
 }
